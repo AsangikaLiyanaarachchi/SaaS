@@ -1,5 +1,5 @@
-// import BlurPage from '@/components/global/blur-page'
-// import InfoBar from '@/components/global/infobar'
+import BlurPage from '@/components/global/blur-page'
+import InfoBar from '@/components/global/infobar'
 import Sidebar from '@/components/sidebar'
 import Unauthorized from '@/components/unauthorized'
 import {
@@ -45,7 +45,14 @@ const layout = async ({ children, params }: Props) => {
         id={params.agencyId}
         type="agency"
       />
-      <div className='md:pl-[300px]'>{children}</div>
+      <div className='md:pl-[300px]'> 
+        <div className="relative">
+         <InfoBar
+          notifications={allNoti}
+          role={allNoti.User?.role}
+        />
+          <BlurPage>{children}</BlurPage>
+        </div></div>
     
    </div>
   )
