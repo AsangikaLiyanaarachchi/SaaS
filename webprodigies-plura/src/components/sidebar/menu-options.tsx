@@ -204,7 +204,8 @@ const MenuOptions = ({
                           </CustomModal>
                         )
                       }}>
-
+                      <PlusCircleIcon size={15} />
+                      Create Sub Account
                     </Button>
 
                   )}
@@ -220,7 +221,7 @@ const MenuOptions = ({
               <CommandList className="py-4 overflow-visible">
                 <CommandEmpty>No Results Found</CommandEmpty>
                 <CommandGroup className="overflow-visible">
-                {sidebarOpt.map((sidebarOptions) => {
+                  {sidebarOpt.map((sidebarOptions) => {
                     let val
                     const result = icons.find(
                       (icon) => icon.value === sidebarOptions.icon
